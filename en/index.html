@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MAX KWOK | DIGITAL ARTIST</title>
+<link rel="shortcut icon" href="../img/logo.ico" >
+<link rel="stylesheet" href="../css/font-en.css">
+<script type="text/javascript" src="../js/index-style.js"></script>
+</head>
+
+<body id="index" onLoad="Loaded()">
+<!--Background Style-->
+<div id="background-style" style="opacity: 0"></div>
+
+<!--Catalog-->
+<a href="javascript:MenuSwitch()"><img id="menu-switch" src="../img/ui/ui_menu.png"></a>
+<div id="catalog" onClick="menuhide()">
+<div id="secondary-catalog">
+	<ui>
+	<a target="content-frame" href="home.html"><li onMouseOver="StartAnimation(theAnimationTarget='home-icon')" onMouseOut="StopAnimation(theAnimationTarget='home-icon')">Home<img id="home-icon" class="catalog-icon" src="../img/ui/catalog_home.png"></li></a>
+	<a target="content-frame" href="favorites.html" id="favorites-item"  onMouseOver="SecondaryMenuPop(theTargetMenu='favorites-menu')"><li onMouseOver="StartAnimation(theAnimationTarget='favorites-icon')" onMouseOut="StopAnimation(theAnimationTarget='favorites-icon')">Favorites<img id="favorites-icon" class="catalog-icon" src="../img/ui/catalog_favorites.png"></li></a>
+	<a href="javascript:SettingPop()"><li onMouseOver="StartAnimation(theAnimationTarget='setting-icon')" onMouseOut="StopAnimation(theAnimationTarget='setting-icon')">Setting<img id="setting-icon" class="catalog-icon" src="../img/ui/catalog_setting.png"></li></a>
+	</ui>
+</div>
+
+<div id="primary-catalog">
+	<ui>
+	<a target="content-frame" href="photograph.html"><li onMouseOver="StartAnimation(theAnimationTarget='photograph-icon')" onMouseOut="StopAnimation(theAnimationTarget='photograph-icon')">Photograph<img id="photograph-icon" class="catalog-icon" src="../img/ui/catalog_photograph.png"></li></a>
+	<a target="content-frame" href="cinema.html"><li onMouseOver="StartAnimation(theAnimationTarget='cinema-icon')" onMouseOut="StopAnimation(theAnimationTarget='cinema-icon')">Cinema<img id="cinema-icon" class="catalog-icon" src="../img/ui/catalog_cinema.png"></li></a>
+	<a target="content-frame" href="project.html"><li onMouseOver="StartAnimation(theAnimationTarget='project-icon')" onMouseOut="StopAnimation(theAnimationTarget='project-icon')">Project<img id="project-icon" class="catalog-icon" src="../img/ui/catalog_project.png"></li></a>
+	<a target="content-frame" href="craft.html"><li onMouseOver="StartAnimation(theAnimationTarget='craft-icon')" onMouseOut="StopAnimation(theAnimationTarget='craft-icon')">Craft<img id="craft-icon" class="catalog-icon" src="../img/ui/catalog_craft.png"></li></a>
+	<a target="content-frame" href="fiction.html"><li onMouseOver="StartAnimation(theAnimationTarget='fiction-icon')" onMouseOut="StopAnimation(theAnimationTarget='fiction-icon')">Fiction<img id="fiction-icon" class="catalog-icon" src="../img/ui/catalog_fiction.png"></li></a>
+	</ui>
+</div>
+</div>
+
+<!--Content Frame-->
+<iframe id="content-frame" name="content-frame" src="display_photos.php" scrolling="auto" frameborder="0" onMouseOver="SecondaryMenuFade()"></iframe>
+
+<!--Setting Frame-->
+<div id="setting-frame">
+	<h1 id="setting-title"><img id="setting-logo" src="../img/ui/ui_setting.png">Setting</h1>
+	<div id="setting-style"></div>
+	<!--Language Setting-->
+	<div>
+		Language<img class="setting-icon" src="../img/ui/ui_language.png">
+		<ui>
+		<li><a href="../en/index.html"><img class="language-icon" src=	"../img/ui/ui_usa.png">English</a></li>
+		<li><a href="../zh/index.html"><img class="language-icon" src=	"../img/ui/ui_cn.png">中文版</a></li>
+		</ui>
+	</div>
+	<!--Device Type Setting-->
+	<div>
+		Device Type<img class="setting-icon" src="../img/ui/ui_device.png">
+		<ui>
+		<li><a href="javascript:ModeDesktop()"><img class="setting-icon" src="../img/ui/ui_desktop.png">Desktop</a></li>
+		<li><a href="javascript:ModeMobile()"><img class="setting-icon"	 src="../img/ui/ui_mobile.png">Mobile</a></li>
+		</ui>
+	</div>
+	<!--Display Mode Setting-->
+	<div>
+		Display Mode<img class="setting-icon" src="../img/ui/ui_display.png">
+		<ui>
+		<li><a href="javascript:ModeDay()"><img class="setting-icon" src="../img/ui/ui_day.png">Day Version</a></li>
+		<li><a href="javascript:ModeNight()"><img class="setting-icon"	 src="../img/ui/ui_night.png">Night Version</a></li>
+		</ui>
+	</div>
+	<!--Music Style Setting-->
+	<div>
+		Music Style<img class="setting-icon" src="../img/ui/ui_music.png">
+		<ui>
+		<li><a href="javascript:PlaylistClassic()">Classic</a></li>
+		<li><a href="javascript:PlaylistFearless()">Fearless</a></li>
+		<li><a href="javascript:PlaylistFresh()">Fresh</a></li>
+		<li><a href="javascript:PlaylistDark()">Dark</a></li>
+		<li><a href="javascript:PlaylistSexy()">Sexy</a></li>
+		<li><a id="nomusic" href="javascript:PlaylistHide()">No Music</a></li>
+		<!--Music Player-->
+		<li><iframe id="player" frameborder="no" border="0" width="350" height="50"></iframe></li>
+		</ui>
+	</div>
+	<!--Cancel-->
+	<div id="cancel">
+		<a href="javascript:SettingFade()"><h2>Cancel</h2></a>
+	</div>
+</div>
+
+<!--Sound-->
+<audio id="pop-up" src="../media/sound/pop-up.wav" preload></audio>
+<audio id="glass-rub" src="../media/sound/glass-rub.wav" preload></audio>
+
+<script type="text/javascript" src="../js/index-animation.js"></script>
+<script type="text/javascript" src="../js/index-music.js"></script>
+<script type="text/javascript" src="../js/index-setting.js"></script>
+<script type="text/javascript" src="../js/index-loading.js"></script>
+</body>
+</html>

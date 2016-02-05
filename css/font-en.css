@@ -1,0 +1,13 @@
+/*COMMON*/
+body{
+/*Font Style*/
+	font-family: 'Arial'}
+	
+@font-face{
+font-family: 'Arial';
+src: url('../font/arial.ttf');
+src: local('Arial'),
+local('Arial'),
+url('../font/arial.woff') format('woff'),
+url('../font/arial.ttf') format('truetype'),
+url('../font/arial.svg#Arial') format('svg');} 

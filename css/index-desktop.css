@@ -1,0 +1,229 @@
+/*HOMEPAGE*/
+#index{
+	/*Scrolling*/
+	overflow: hidden}
+	
+	/*Background Image*/
+#background-style{
+	position: fixed; z-index: 0;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	/*Animation*/
+	transition-property: opacity;
+	transition-duration: 2s;
+	/*(for Firefox)*/
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 2s;
+	/*(for Safari & Chrome)*/
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 2s;
+	/*(for Opera)*/
+	-o-transition-property: opacity;
+	-o-transition-duration: 2s}
+
+/*MENU*/
+	/*Catalog*/
+#menu-switch{display: none}
+
+.catalog-icon{
+	position: absolute;
+	top: -3px; left: 135px;
+	width: 35px; height: 35px;
+	margin-left: 20px}
+	
+#secondary-catalog img{
+	top: 0; left: 80px;
+	width: 25px; height:25px}
+	
+#home-icon, #photograph-icon, #cinema-icon, #craft-icon, #fiction-icon{
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg)}
+
+#primary-catalog, #secondary-catalog{
+	position: fixed;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute; z-index: 2;
+	list-style-type: none;
+	background-color: transparent}
+	
+#primary-catalog{top: 115px; left: 0}
+
+#secondary-catalog{top: 0px; left: 0}
+
+#primary-catalog li, #secondary-catalog li{
+	position: relative;
+	text-align: center;
+	/*Animation*/
+	transition-property: left, background-color;
+	transition-duration: 0.03s, 2s;
+	transition-timing-function: ease, ease;
+	/*(for Firefox)*/
+	-moz-transition-property: left, background-color;
+	-moz-transition-duration: 0.03s, 2s;
+	/*(for Safari & Chrome)*/
+	-webkit-transition-property: left, background-color;
+	-webkit-transition-duration: 0.03s, 2s;
+	/*(for Opera)*/
+	-o-transition-property: left, background-color;
+	-o-transition-duration: 0.03s, 2s}
+#primary-catalog li:hover, #secondary-catalog li:hover{left: 0}
+
+#primary-catalog li{
+	left: -145px;
+	width: 125px; height: 16px;
+	font-size: 14px;
+	padding: 5px 10px 10px 10px;
+	margin: 15px 0 15px 0;
+	border-radius: 0 7px 7px 0}
+
+#menu-hide{display: none}
+
+	/*Secondary*/
+
+#secondary-catalog li{
+	left: -90px;
+	width: 80px; height: 12px;
+	font-size: 10px;
+	padding: 5px 5px 10px 5px;
+	margin: 10px 0 10px 0;
+	border-radius: 0 3px 3px 0}
+	
+/*(Animation)*/
+/*(for Safari & Chrome)*/
+@-webkit-keyframes animation-rotate{
+	from{-webkit-transform: rotate(0deg)}
+	to{-webkit-transform: rotate(360deg)}}
+@-webkit-keyframes animation-shine{
+	0%{opacity: 1}
+	20%{opacity: 0}
+	40%{opacity: 1}
+	100%{opacity: 1}}
+
+/*(for Firefox)*/
+@-moz-keyframes animation-rotate{
+	from{-moz-transform: rotate(0deg)}
+	to{-moz-transform: rotate(360deg)}}
+@-moz-keyframes animation-shine{
+	0%{opacity: 1}
+	20%{opacity: 0}
+	40%{opacity: 1}
+	100%{opacity: 1}}
+	
+/*(for IE)*/
+@-ms-keyframes animation-rotate{
+	from{-ms-transform: rotate(0deg)}
+	to{-ms-transform: rotate(360deg)}}
+@-ms-keyframes animation-shine{
+	0%{opacity: 1}
+	20%{opacity: 0}
+	40%{opacity: 1}
+	100%{opacity: 1}}
+
+/*PAGE*/
+#content-frame{
+	position: absolute; z-index: 1;
+	top: 0; left: 0;
+	width: 100%; height: 100%}
+
+#setting-frame{
+	position: absolute; z-index: 3;
+	top: -200%; left: 0;
+	width: 300px; height: 620px;
+	padding: 10px 30px 10px 30px;
+	margin: 10px 10px 10px 10px;
+	text-align: right;
+	display: none;
+	/*List style*/
+	list-style-type: none;
+	/*Shadow*/
+	box-shadow: 2px 2px 2px black;
+	/*Border radius*/
+	border-radius: 10px;
+	/*Animation*/
+	transition-property: opacity;
+	transition-duration: 2s;
+	/*(for Firefox)*/
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 2s;
+	/*(for Safari & Chrome)*/
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 2s;
+	/*(for Opera)*/
+	-o-transition-property: opacity;
+	-o-transition-duration: 2s}
+	
+	/*Setting background*/
+#setting-style{
+	position: absolute; z-index: -1;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.85;
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+	/*Border radius*/
+	border-radius: 10px}
+
+.setting-icon, .language-icon{
+	width: 25px; height: 25px;
+	margin: 0 2px 0 2px}
+
+#setting-frame div li{text-align: left}
+
+#nomusic:hover{text-decoration: line-through}
+
+#setting-title{text-align: center}
+
+#setting-logo{
+	width: 40px; height: 40px;
+	margin-right: 10px;
+	animation-name: animation-rotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear}
+
+#cancel{position: absolute;
+	bottom: 10px; right: 30px}
+
+	/*Music Player*/
+#player{
+	position: relative;
+	top: 0; left: -12px;
+	width: 320px; height: 50px}
+
+/*(Animation)*/
+/*(for Safari & Chrome)*/
+@-webkit-keyframes setting-pop{
+	from{top: -200%}
+	to{top: 0}}
+@-webkit-keyframes setting-fade{
+	from{top: 0}
+	to{top: -200%}}
+
+/*(for Firefox)*/
+@-moz-keyframes setting-pop{
+	from{top: -200%}
+	to{top: 0}}
+@-moz-keyframes setting-fade{
+	from{top: 0}
+	to{top: -200%}}
+	
+/*(for IE)*/
+@-ms-keyframes setting-pop{
+	from{top: -200%}
+	to{top: 0}}
+@-ms-keyframes setting-fade{
+	from{top: 0}
+	to{top: -200%}}

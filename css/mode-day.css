@@ -1,0 +1,47 @@
+body, #setting-frame{
+	background-color: white;
+	/*Animation*/
+	transition-property: background-color;
+	transition-duration: 2s;
+	/*(for Firefox)*/
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 2s;
+	/*(for Safari & Chrome)*/
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 2s;
+	/*(for Opera)*/
+	-o-transition-property: background-color;
+	-o-transition-duration: 2s;}
+
+/*Link Style*/
+a:link{
+	color:black;
+	text-decoration: none}
+a:visited{
+	color:black;
+	text-decoration: none}
+a:hover{
+	color:red;
+	text-decoration: none}
+a:active{
+	color:black;
+	text-decoration: none}
+	
+/*Text color*/
+body{color: black}
+
+/*Catalog UI color*/
+#primary-catalog li, #secondary-catalog li{color: black}
+
+#primary-catalog li{background-color: maroon}
+#primary-catalog li:hover{background-color: red}
+
+#secondary-catalog li{background-color: maroon}
+#secondary-catalog li:hover{background-color: red}
+
+/*UI icon*/
+.catalog-icon, .setting-icon, #setting-logo, #menu-switch{
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-ms-filter: invert(1);
+	filter: invert(1)}
